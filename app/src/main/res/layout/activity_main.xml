@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mbrass.com.moi.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"
+        android:weightSum="10"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TableRow
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/searchName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter name"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/bodyArea"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="9"
+
+            android:background="@android:color/white">
+
+            <ScrollView
+                android:id="@+id/scrollArea"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_bright"
+                android:scrollbarStyle="outsideOverlay">
+
+                <TableLayout
+                    android:id="@+id/guestTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/holo_green_dark"
+                    android:weightSum="1"
+                    android:stretchColumns="*">
+
+
+                </TableLayout>
+            </ScrollView>
+        </TableRow>
+
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>
